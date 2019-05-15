@@ -8,4 +8,8 @@ To use simply edit the three configuration files: `email.conf`, `terms.conf`, `l
 - `terms.conf` -- contains the search terms you wish to search for e.g. `developer`.
 - `locs.conf` -- contains the locations you wish to search for. Currently it uses `indeed.co.uk` so is limited to the UK; but it is easily extendable to use other locations.
 
+To run the script simply run `python job_alert.py`. 
+
+The script uses the python library `keyring` to access the password for your email, so this needs to be set. For more details check the [keyring documentation](https://pypi.org/project/keyring/).
+
 _Dependencies:_ `Python 2.x`, `BeautifulSoup4` (Python package), `keyring` (Python package).
