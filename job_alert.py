@@ -93,7 +93,9 @@ def grab_job_elems(url, page = 0):
     # Get only jobs posted today
     todays = [e for d, e in elems if d in ('Just posted', 'Today')]
     # If all on this page are for today look at next page recursively
-    if len(todays) == len(elems):
+    if len(elems) == 0:
+        return []
+    elif len(todays) == len(elems):
         return todays + grab_job_elems(url, page = page + 1)
     else:
         return todays
